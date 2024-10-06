@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -77,23 +77,32 @@
               <div class="text-6xl font-black space-y-5">
                 <h1 class="">Welcome to the</h1>
                 <div class="flex gap-5">
-                  <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#797DFC] to-slate-600">ReTro</span>
+                  <span
+                    class="bg-clip-text text-transparent bg-gradient-to-r from-[#797DFC] to-slate-600"
+                    >ReTro</span
+                  >
                   <h1 class="">Forum</h1>
                 </div>
               </div>
-              <p class="font-medium text-xl">Share your favorite opinion and win and wp <br> forum coffee mug!</p>
+              <p class="font-medium text-xl">
+                Share your favorite opinion and win and wp <br />
+                forum coffee mug!
+              </p>
               <label class="bg-white py-3 pr-2 pl-4 rounded-full">
                 <input
+                id="search-input"
                   class="text-xs mt-11 w-7/12"
                   placeholder="Search here anything"
                   type="text"
                 />
-                <button class="bg-[#797DFC] py-1 px-4 rounded-full text-white">
+                <button onclick="searchButton()" id="serach-button" class="bg-[#797DFC] py-1 px-4 rounded-full text-white">
                   Search
                 </button>
               </label>
             </div>
-            <div class="flex justify-between bg-white text-[#12132db7] font-medium p-14 rounded-[32px] text-2xl">
+            <div
+              class="flex justify-between bg-white text-[#12132db7] font-medium p-14 rounded-[32px] text-2xl"
+            >
               <div class="pr-10 space-y-5">
                 <p>Registered Users</p>
                 <p>Forum</p>
@@ -111,7 +120,48 @@
         </div>
       </div>
     </header>
-    <main></main>
+
+    <!-- main section -->
+    <main class="w-10/12 mx-auto">
+      <!-- lets discuss section-->
+      <section class="my-20">
+        <div class="mb-8 space-y-6 text-center">
+          <h3 class="font-black text-4xl">Let’s Discuss</h3>
+          <p class="text-lg">
+            Yes, you can run unit tests and view the results directly within the
+            <br />
+            app. The integrated testing features allow for a streamlined .
+          </p>
+        </div>
+
+        <!-- hero section -->
+        <div  class="grid grid-cols-3 gap-10">
+          <!-- main card container -->
+           <div id="card-container" class="col-span-2 space-y-6">
+            
+           </div>
+
+           <!-- aside -->
+            <div id="markAsRead"  class="col-span-1 p-8 bg-base-200 rounded-3xl space-y-4">
+              <div class="flex justify-between gap-10">
+                <h6 class="font-bold text-xl">Title</h6>
+                <div class="flex gap-2 items-center">
+                  <i class="fa-solid fa-check-double"></i>
+                  <p>Mark as read (<span id="count-mark">0</span>)</p>
+                </div>
+              </div>
+
+              <!-- mark container -->
+              
+            </div>
+        </div>
+       
+      </section>
+    </main>
     <footer></footer>
+    <hr>
+
+    <script src="./js/script.js"></script>
+   
   </body>
 </html>
